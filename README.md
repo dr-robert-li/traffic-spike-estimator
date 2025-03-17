@@ -141,7 +141,7 @@ Consider using the upper bound for critical services where downtime is unaccepta
 
 MIT License
 
-Copyright (c) 2023
+Copyright (c) 2025
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
