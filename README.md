@@ -8,7 +8,7 @@ The model is based on empirical data collected from various web services, platfo
 
 ## Research Basis
 
-The tool implements three models:
+The tool implements three models based on data gathered from over 200 sites from a managed hosting platform and incorporating peer reviewed research on traffic patterns for the 100 largest eCommerce sites on the Internet and one of the largest social media sites on the Internet:
 
 ### **1. Upper Bound (Worst-Case Scenarios)**  
 **Formula**:  
