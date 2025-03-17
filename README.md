@@ -85,6 +85,8 @@ This will:
 - Add the calculated spike magnitudes to the legend
 - Automatically adjust the scale for optimal visualization
 
+![Example Figure](https://raw.githubusercontent.com/dr-robert-li/traffic-spike-estimator/refs/heads/main/example.png)
+
 ### Interpreting Results
 
 The output shows:
