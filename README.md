@@ -10,9 +10,49 @@ The model is based on empirical data collected from various web services, platfo
 
 The tool implements three models:
 
-1. **Upper Bound (Worst-Case)**: Represents the maximum observed spike magnitudes (593.61 × T^-0.2974)
-2. **Median Estimate**: Represents the typical spike magnitude (430.3 × T^-0.3857)
-3. **Lower Bound (Minimum)**: Represents the minimum expected spike magnitude (344.27 × T^-0.412)
+### **1. Upper Bound (Worst-Case Scenarios)**  
+**Formula**:  
+$$M_{\text{upper}}(T) = 593.61 \times T^{-0.2974}$$  
+**Data Points**:  
+- 35x at 15,000 users/day  
+- 4.4x at 10,000,000 users/day  
+- 2.69x at 100,000,000 users/day  
+
+**Use Case**:  
+- Maximum expected spikes (e.g., Black Friday sales, viral content).  
+
+### **2. Median Estimate Maximum**  
+**Formula**:  
+$$M_{\text{median}}(T) = 430.3 \times T^{-0.3857}$$  
+**Data Points**:  
+- 30x at 1,000 users/day  
+- 1.37x at 3,000,000 users/day  
+
+**Use Case**:  
+- Baseline for typical traffic patterns.  
+
+### **3. Lower Bound Maximum**  
+**Formula**:  
+$$M_{\text{lower}}(T) = 344.27 \times T^{-0.412}$$  
+**Data Points**:  
+- 20x at 1,000 users/day  
+- 3x at 100,000 users/day  
+
+**Use Case**:  
+- Conservative capacity planning (e.g., minimal redundancy).  
+
+### **Parameter Comparison**  
+| Model | Coefficient (a) | Exponent (b) | Decay Rate |  
+|-------|---------------------|------------------|------------|  
+| Upper | 593.61 | -0.2974 | 29.7% per decade |  
+| Median | 430.3 | -0.3857 | 38.6% per decade |  
+| Lower | 344.27 | -0.412 | 41.2% per decade |  
+
+### **Example Calculation**  
+For **50,000 users/day**:  
+- **Upper**: $$593.61 \times 50,000^{-0.2974} \approx 8.1\text{x}$$  
+- **Median**: $$430.3 \times 50,000^{-0.3857} \approx 5.2\text{x}$$  
+- **Lower**: $$344.27 \times 50,000^{-0.412} \approx 3.9\text{x}$$  
 
 Where T is the mean daily traffic in users per day.
 
