@@ -107,7 +107,7 @@ Use these results to plan capacity that can handle the expected spike magnitude 
 
 The model is based on observed data and follows general trends. Your specific service characteristics may result in different spike patterns. 
 
-Consider using the upper bound for critical services where downtime is unacceptable.
+Consider using the upper bound for critical services where downtime is unacceptable as capacity planning based on upper bound estimation requires exponentially more resourcing.
 
 ## License
 
