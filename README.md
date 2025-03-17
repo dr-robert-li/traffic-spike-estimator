@@ -58,6 +58,34 @@ Where T is the mean daily traffic in users per day.
 
 The model demonstrates that while smaller services might need to handle spikes of 20-35x their normal traffic, large-scale services with millions of daily users typically only experience spikes of 1.5-4x their normal traffic levels.
 
+## Installation
+
+### Prerequisites
+- Python 3.6 or higher
+- pip (Python package installer)
+
+### Steps
+
+1. Clone the repository:
+```bash
+git clone https://github.com/dr-robert-li/traffic-spike-estimator.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd traffic-spike-estimator
+```
+
+3. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+If the requirements.txt file is not available, you'll need to manually install the following packages:
+```bash
+pip install matplotlib numpy pandas
+```
+
 ## Usage
 
 ### Basic Usage
